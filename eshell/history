@@ -1,0 +1,128 @@
+git commit --amend --author "Ayachi Gin" -m "Add files"
+gitlog
+git log
+git push
+ls
+cd ../
+rm wild-card-search/
+rm -rf wild-card-search/
+rm -rf wild-card-search/
+open .
+start .
+cd ../..
+ls
+mv wild-card-search.cabal wildcard.cabal
+ls
+git status
+git diff
+git checkout -- wildcard.cabal 
+git checkout -- wild-card-search.cabal
+git status
+git diff
+ls
+rm wildcard.cabal
+git status
+git diff
+git diff
+git add -p
+git status
+git push origin master
+git status
+cd ../
+git clone git://yousource.it.jyu.fi/optimization-with-haskell/differential-evolution.git
+cd differential-evolution/
+ls
+cd Numeric/Optimization/Algorithms/
+ls
+cd ../../../
+ls
+cabal haddoc
+cabal haddock
+cabal configure
+cabal sandbox init
+cabal install --only-dependencies
+cd ../GA/
+git status
+git diff
+git checkout HEAD
+git status
+git discard --help
+cd ../../python/roster_maker/
+git status
+git branch
+git checkout develop
+git checkout -b random
+python ./main.py 
+cd out/
+ls
+start .
+echo $PATH
+echo $PATH
+echo $PATH
+start 
+start .
+echo $PATH
+git status
+start .
+where stat
+where git
+where where
+where grep
+grep
+where git
+where grep
+grep -nH "foo"
+ls
+cd projects/haskell/
+ls
+cd xlsx-templater/
+ls
+cd src/
+ls
+grep -nH "import"
+cat Test.hs
+find -name *.hs
+where find
+git --version
+cd ../../
+cd differential-evolution/
+ls
+cabal install
+cabal install --reinstall
+cabal unregister
+cabal install --reinstall --constraint
+cabal install --reinstall --constraint random-source==0.3.0.4
+cabal install --reinstall --constraint random-source==0.3.0.4
+cabal install --reinstall
+cabal install quickcheck-2.6
+cabal install quickcheck-2.6 --reinstall
+cabal install
+cabal install
+cabal install
+cabal install
+cd ../
+python main.py 
+python main.py 
+python main.py 
+start ./out/out.csv
+open .
+where start
+start
+c:/cmder/vendor/msysgit/bin/start
+chmod +x c:/cmder/vendor/msysgit/bin/start
+start ./out/out.csvstart
+c:/cmder/vendor/msysgit/bin/start
+ghci
+python
+ghci
+cd ../genetic-algorithm/
+cabal sandbox init
+cabal install transformers
+cd ~
+cabal install transformers
+cabal install mtl
+cd ~
+cp -R c:/gnupack_devel-11.00/home/.emacs.d/ProofGeneral-4.2 c:/home/.emacs.d/
+cd .emacs.d/
+ls
+cd ../

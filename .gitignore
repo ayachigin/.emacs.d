@@ -1,3 +1,7 @@
 # Compiled
 *.elc
 *~
+elpa/*.txt
+eshell/history
+eshell/lastdir
+elpa/archives/*

@@ -1,128 +1,128 @@
-git commit --amend --author "Ayachi Gin" -m "Add files"
-gitlog
-git log
-git push
+cp ./invalid.hs c:/home/vagrant/invalid.hs
+ghci
 ls
-cd ../
-rm wild-card-search/
-rm -rf wild-card-search/
-rm -rf wild-card-search/
-open .
-start .
-cd ../..
+ghc invalid.hs
+hlint invalid.hs
+hlint invalid.hs --encoding=utf-8
+ghci
+cd ../../
+rm -rf prolog/
 ls
-mv wild-card-search.cabal wildcard.cabal
-ls
-git status
-git diff
-git checkout -- wildcard.cabal 
-git checkout -- wild-card-search.cabal
-git status
-git diff
-ls
-rm wildcard.cabal
-git status
-git diff
-git diff
-git add -p
-git status
-git push origin master
-git status
-cd ../
-git clone git://yousource.it.jyu.fi/optimization-with-haskell/differential-evolution.git
-cd differential-evolution/
-ls
-cd Numeric/Optimization/Algorithms/
-ls
-cd ../../../
-ls
-cabal haddoc
-cabal haddock
-cabal configure
-cabal sandbox init
-cabal install --only-dependencies
-cd ../GA/
-git status
-git diff
-git checkout HEAD
-git status
-git discard --help
-cd ../../python/roster_maker/
-git status
-git branch
-git checkout develop
-git checkout -b random
-python ./main.py 
-cd out/
-ls
-start .
-echo $PATH
-echo $PATH
-echo $PATH
-start 
-start .
-echo $PATH
-git status
-start .
-where stat
-where git
-where where
-where grep
-grep
-where git
-where grep
-grep -nH "foo"
-ls
-cd projects/haskell/
-ls
-cd xlsx-templater/
+cd _satori_parser/
 ls
 cd src/
 ls
-grep -nH "import"
-cat Test.hs
-find -name *.hs
-where find
-git --version
 cd ../../
-cd differential-evolution/
+rm -r satorip/
+cd ../../home/.emacs.d/
+find -name "assoc.el"
+find --name "assoc.el"
+find --help
+find /?
+find
+find "*.el"
 ls
-cabal install
-cabal install --reinstall
-cabal unregister
-cabal install --reinstall --constraint
-cabal install --reinstall --constraint random-source==0.3.0.4
-cabal install --reinstall --constraint random-source==0.3.0.4
-cabal install --reinstall
-cabal install quickcheck-2.6
-cabal install quickcheck-2.6 --reinstall
-cabal install
-cabal install
-cabal install
-cabal install
-cd ../
-python main.py 
-python main.py 
-python main.py 
-start ./out/out.csv
-open .
-where start
-start
-c:/cmder/vendor/msysgit/bin/start
-chmod +x c:/cmder/vendor/msysgit/bin/start
-start ./out/out.csvstart
-c:/cmder/vendor/msysgit/bin/start
-ghci
-python
-ghci
-cd ../genetic-algorithm/
-cabal sandbox init
-cabal install transformers
-cd ~
-cabal install transformers
-cabal install mtl
-cd ~
-cp -R c:/gnupack_devel-11.00/home/.emacs.d/ProofGeneral-4.2 c:/home/.emacs.d/
-cd .emacs.d/
+cd themes/
 ls
-cd ../
+doctest Util.hs 
+doctest Util.hs --encoding=utf-8
+doctest Util.hs
+doctest ./Util.hs 
+doctest ./Util.hs 
+doctest ./Util.hs 
+doctest ./Util.hs 
+doctest ./Util.hs 
+ls
+chcp
+chcp 65001
+chcp
+ghci
+chcp
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs --encoding=utf-8
+alias
+alias hlint=hlint $* --encoding=utf-8
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+alias --help
+alias hlint 'hlinit $* --encoding=utf-8'
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+alias
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+alias
+alias
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+alias
+alias hlint
+alias
+alias hlint 'hlint $*'
+alias
+hlint hoge
+alias hlint 'hlint $* --encoding=utf-8'
+alias
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+cd ../../
+hlint projects/haskell/satori-parser/Language/Satori/Util.hs 
+doctest ./Util.hs 
+doctest projects/haskell/satori-parser/Language/Satori/Util.hs 
+chcp
+chcp 65001
+doctest projects/haskell/satori-parser/Language/Satori/Util.hs 
+chcp
+chcp
+doctest projects/haskell/satori-parser/Language/Satori/Util.hs 
+hoge
+ls
+ghc text.hs
+ghc string.hs 
+ghc string.hs 
+ls
+./text.exe moge.csv 
+time ./text.exe moge.csv 
+time ./string.exe moge.csv 
+time ./string.exe moge.csv 
+time ./string.exe moge.csv 
+time ./string.exe moge.csv 
+time ./text.exe moge.csv 
+time ./text.exe moge.csv 
+ghc text.hs
+ghc string.hs
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+cat text.txt
+ghc string.hs
+time string.exe moge.csv 
+cat string.txt
+cat string.txt
+ghc string.hs
+time string.exe moge.csv 
+cat string.txt
+ghc text.hs
+ghc string.hs
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time text.exe moge.csv 
+time text.exe moge.csv 
+time string.exe moge.csv 
+time string.exe moge.csv 
+time string.exe moge.csv 
+cat string.txt

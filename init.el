@@ -17,7 +17,6 @@
 (setq default-directory (getenv "HOME"))
 (add-to-list 'exec-path (concat (getenv "HOME")
                                 "C:\\cmder\\vendor\\msysgit\\bin"))
-
 ;; newline
 (global-set-key "\C-m" 'newline)
 
@@ -78,20 +77,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (dark-laptop)))
- '(custom-safe-themes (quote ("f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" "2c73700ef9c2c3aacaf4b65a7751b8627b95a1fd8cebed8aa199f2afb089a85f" "ad97202c92f426a867e83060801938acf035921d5d7e78da3041a999082fb565" "6cf0e8d082a890e94e4423fc9e222beefdbacee6210602524b7c84d207a5dfb5" "3fe4861111710e42230627f38ebb8f966391eadefb8b809f4bfb8340a4e85529" "fc89666d6de5e1d75e6fe4210bd20be560a68982da7f352bd19c1033fb7583ba" default)))
+ '(custom-enabled-themes (quote (misterioso)))
+ '(custom-safe-themes (quote ("0f0adcd1352b15a622afd48fcff8232169aac4b5966841e506f815f81dac44ea" "f211f8db2328fb031908c9496582e7de2ae8abd5f59a27b4c1218720a7d11803" "0521e8bea7954b4d42e9b68390be2a6d4549d15a3f47b391b8c870766f520cf7" "e0b1e7cea8624d6c724a8f046fd456db8af3ffff14a85bea46d1bc87b08b5964" "f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" "2c73700ef9c2c3aacaf4b65a7751b8627b95a1fd8cebed8aa199f2afb089a85f" "ad97202c92f426a867e83060801938acf035921d5d7e78da3041a999082fb565" "6cf0e8d082a890e94e4423fc9e222beefdbacee6210602524b7c84d207a5dfb5" "3fe4861111710e42230627f38ebb8f966391eadefb8b809f4bfb8340a4e85529" "fc89666d6de5e1d75e6fe4210bd20be560a68982da7f352bd19c1033fb7583ba" default)))
+ '(default-frame-alist (quote ((background-color . "grey30") (background-mode . dark) (border-color . "black") (cursor-color . "black") (foreground-color . "gainsboro") (mouse-color . "black"))))
  '(electric-indent-mode t)
+ '(flycheck-haskell-hlint-executable "hlint --encoding=utf-8")
  '(global-auto-complete-mode t)
  '(haskell-ask-also-kill-buffers nil)
- '(haskell-check-command "ghc -fno-code")
+ '(haskell-check-command "hlint --encoding=utf-8")
  '(haskell-compile-ghc-filter-linker-messages nil)
  '(haskell-interactive-mode-delete-superseded-errors nil)
- '(haskell-mode-hook (quote (turn-on-haskell-indent turn-on-haskell-indentation interactive-haskell-mode (lambda nil (ghc-init) (flycheck-mode)))))
+ '(haskell-mode-hook (quote (turn-on-haskell-decl-scan turn-on-haskell-indentation interactive-haskell-mode (lambda nil (ghc-init) (flycheck-mode) (auto-complete-mode)))))
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-process-use-presentation-mode t)
  '(indent-tabs-mode nil)
+ '(inferior-haskell-wait-and-jump t)
+ '(initial-frame-alist (quote ((alpha . 90) (width . 80) (height . 48) (top . 0) (left . 0) nil)))
  '(prolog-program-name (quote (((getenv "EPROLOG") (eval (getenv "EPROLOG"))) (eclipse "eclipse") (mercury nil) (sicstus "sicstus") (swi "C:/Program Files/swipl/bin/swipl.exe") (t "prolog"))))
  '(prolog-system (quote swi))
+ '(rainbow-identifiers-cie-l*a*b*-lightness 80)
+ '(rainbow-identifiers-cie-l*a*b*-saturation 18)
+ '(shell-pop-shell-type (quote ("shell" "*shell*" (lambda nil (eshell)))))
+ '(shell-pop-universal-key "C-;")
  '(tool-bar-mode nil)
  '(vc-handled-backends nil))
 (custom-set-faces
@@ -281,12 +288,10 @@
 ;; @ color-theme
 (add-to-list 'custom-theme-load-path
              (file-name-as-directory "~/.emacs.d/themes/"))
-(load-theme 'dark-laptop t t)
-(enable-theme 'dark-laptop)
 
 ;; ----------------------------------------------------------------------
 ;; @ initial-frame
-(setq initial-frame-alist
+'(setq initial-frame-alist
       (append (list
 	       '(alpha . 80)
 	       '(width . 80)                ;; フレームの幅
@@ -294,7 +299,7 @@
 	       '(top . 0)                    ;; Y 表示位置
 	       '(left . 0)                ;; X 表示位置
 	      initial-frame-alist)))
-(setq default-frame-alist initial-frame-alist)
+'(setq default-frame-alist initial-frame-alist)
 
 ;;==========================================================================
 ;; linum-adjust
@@ -323,9 +328,7 @@
 ;; haskell-mode
 ;; ghc-mod
 (add-to-list 'exec-path "C:\\Program Files\\Haskell\\bin")
-;; auto-complete
-(require 'auto-complete-config)
-(add-to-list 'ac-sources 'ac-source-ghc-mod)
+
 
 ;;==========================================================================
 ;; coq-mode

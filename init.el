@@ -335,7 +335,54 @@
 (load "~/.emacs.d/ProofGeneral-4.2/generic/proof-site.elc")
 (add-to-list 'exec-path "C:/Program Files (x86)/Coq/bin")
 
+;;==========================================================================
+;; js2-mode
+(require 'js2-mode)
+(add-hook 'js2-mode-hook (lambda ()
+                           (ac-js2-mode)
+                           (electric-pair-mode)))
+(require 'js2-refactor)
+
+;;==========================================================================
+;; helm-mode
+(require 'helm-config)
+(helm-mode 1)
+
+;;==========================================================================
+;; egison-mode
+(add-to-list 'load-path "C:/home/.emacs.d/egison-mode")
+(autoload 'egison-mode "egison-mode" "Major mode for editing Egison code." t)
+(setq auto-mode-alist
+(cons `("\\.egi$" . egison-mode) auto-mode-alist))
+
+;; ------------------------------------------------------------------------
+;; @ migemo/cmigemo
+(require 'migemo)
+
+(setq migemo-command "C:/home/cmigemo/cmigemo")
+(setq migemo-options '("-q" "--emacs"))
+(setq migemo-dictionary "C:/home/cmigemo/dict/utf-8/migemo-dict")
+(setq migemo-user-dictionary nil)
+(setq migemo-regex-dictionary nil)
+(setq migemo-use-pattern-alist t)
+(setq migemo-use-frequent-pattern-alist t)
+(setq migemo-pattern-alist-length 1024)
+(setq migemo-coding-system 'utf-8-unix)
+(load-library "migemo")
+(migemo-init)
+
+;;==========================================================================
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
 
 (provide 'init)
 ;;; init.el ends here
-

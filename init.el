@@ -81,6 +81,10 @@
  '(custom-safe-themes (quote ("0f0adcd1352b15a622afd48fcff8232169aac4b5966841e506f815f81dac44ea" "f211f8db2328fb031908c9496582e7de2ae8abd5f59a27b4c1218720a7d11803" "0521e8bea7954b4d42e9b68390be2a6d4549d15a3f47b391b8c870766f520cf7" "e0b1e7cea8624d6c724a8f046fd456db8af3ffff14a85bea46d1bc87b08b5964" "f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" "2c73700ef9c2c3aacaf4b65a7751b8627b95a1fd8cebed8aa199f2afb089a85f" "ad97202c92f426a867e83060801938acf035921d5d7e78da3041a999082fb565" "6cf0e8d082a890e94e4423fc9e222beefdbacee6210602524b7c84d207a5dfb5" "3fe4861111710e42230627f38ebb8f966391eadefb8b809f4bfb8340a4e85529" "fc89666d6de5e1d75e6fe4210bd20be560a68982da7f352bd19c1033fb7583ba" default)))
  '(default-frame-alist (quote ((background-color . "grey30") (background-mode . dark) (border-color . "black") (cursor-color . "black") (foreground-color . "gainsboro") (mouse-color . "black"))))
  '(electric-indent-mode t)
+ '(eshell-prompt-function (lambda nil (concat (abbreviate-file-name (eshell/pwd)) "
+λ ")))
+ '(eshell-prompt-regexp "^[^
+]*λ ")
  '(flycheck-haskell-hlint-executable "hlint --encoding=utf-8")
  '(global-auto-complete-mode t)
  '(haskell-ask-also-kill-buffers nil)
@@ -338,10 +342,12 @@
 ;;==========================================================================
 ;; js2-mode
 (require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'js2-mode-hook (lambda ()
                            (ac-js2-mode)
                            (electric-pair-mode)))
 (require 'js2-refactor)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 ;;==========================================================================
 ;; helm-mode
@@ -383,6 +389,26 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+;;==========================================================================
+;; typescript-mode
+(require 'typescript)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
+(require 'tss)
+
+;; Key binding
+(setq tss-popup-help-key "C-:")
+(setq tss-jump-to-definition-key "C->")
+(setq tss-implement-definition-key "C-c i")
+
+;; Make config suit for you. About the config item, eval the following sexp.
+;; (customize-group "tss")
+
+;; Do setting recommemded configuration
+(tss-config-default)
+
+
 
 (provide 'init)
 ;;; init.el ends here
+

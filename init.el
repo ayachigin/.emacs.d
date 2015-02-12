@@ -12,7 +12,10 @@
 ;;; Code:
 ;;; PATH:
 (setenv "PATH" (concat
-                "C:/cmder/vendor/msysgit/bin"
+                "C:/cmder/vendor/msysgit/bin;"
+                (getenv "PATH")))
+(setenv "PATH" (concat
+                "C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0;"
                 (getenv "PATH")))
 (setq default-directory (getenv "HOME"))
 (add-to-list 'exec-path (concat (getenv "HOME")
@@ -96,13 +99,12 @@
  '(haskell-process-use-presentation-mode t)
  '(indent-tabs-mode nil)
  '(inferior-haskell-wait-and-jump t)
- '(initial-frame-alist (quote ((alpha . 90) (width . 80) (height . 48) (top . 0) (left . 0) nil)))
+ '(initial-frame-alist (quote ((alpha . 90) (width . 85) (height . 48) (top . 0) (left . 0) nil)))
  '(prolog-program-name (quote (((getenv "EPROLOG") (eval (getenv "EPROLOG"))) (eclipse "eclipse") (mercury nil) (sicstus "sicstus") (swi "C:/Program Files/swipl/bin/swipl.exe") (t "prolog"))))
  '(prolog-system (quote swi))
  '(rainbow-identifiers-cie-l*a*b*-lightness 80)
  '(rainbow-identifiers-cie-l*a*b*-saturation 18)
  '(shell-pop-shell-type (quote ("shell" "*shell*" (lambda nil (eshell)))))
- '(shell-pop-universal-key "C-;")
  '(tool-bar-mode nil)
  '(vc-handled-backends nil))
 (custom-set-faces
@@ -298,7 +300,7 @@
 '(setq initial-frame-alist
       (append (list
 	       '(alpha . 80)
-	       '(width . 80)                ;; フレームの幅
+	       '(width . 84)                ;; フレームの幅
 	       '(height . 48)                ;; フレームの高さ
 	       '(top . 0)                    ;; Y 表示位置
 	       '(left . 0)                ;; X 表示位置
@@ -327,6 +329,10 @@
 ;; fonts
 (set-face-attribute 'default nil :family "Migu 1M" :height 100)
 (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 1M"))
+
+;;==========================================================================
+;; shell-pop
+(global-set-key (kbd "C-c p") 'shell-pop)
 
 ;;==========================================================================
 ;; haskell-mode
